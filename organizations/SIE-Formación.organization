@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<organization:Organization xmlns:organization="http://documentation.bonitasoft.com/organization-xml-schema/1.1" name="SIE-Formación">
+  <customUserInfoDefinitions/>
+  <users>
+    <user userName="Gustavo">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="Alejandro">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="Alberto">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="Ana">
+      <manager>Gustavo</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="Elena">
+      <manager>Alejandro</manager>
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="Andrés">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+    <user userName="María">
+      <personalData/>
+      <professionalData/>
+      <password encrypted="false">bpm</password>
+      <customUserInfoValues/>
+    </user>
+  </users>
+  <roles>
+    <role name="Director">
+      <displayName>Director</displayName>
+    </role>
+    <role name="Instructor">
+      <displayName>Instructor</displayName>
+    </role>
+    <role name="Alumno">
+      <displayName>Alumno</displayName>
+    </role>
+  </roles>
+  <groups>
+    <group name="SIE-Formacion">
+      <displayName>SIE-Formación</displayName>
+    </group>
+  </groups>
+  <memberships>
+    <membership>
+      <userName>Gustavo</userName>
+      <roleName>Director</roleName>
+      <groupName>SIE-Formacion</groupName>
+    </membership>
+    <membership>
+      <userName>Alejandro</userName>
+      <roleName>Director</roleName>
+      <groupName>SIE-Formacion</groupName>
+    </membership>
+    <membership>
+      <userName>Alberto</userName>
+      <roleName>Instructor</roleName>
+      <groupName>SIE-Formacion</groupName>
+    </membership>
+    <membership>
+      <userName>Ana</userName>
+      <roleName>Instructor</roleName>
+      <groupName>SIE-Formacion</groupName>
+    </membership>
+    <membership>
+      <userName>Elena</userName>
+      <roleName>Instructor</roleName>
+      <groupName>SIE-Formacion</groupName>
+    </membership>
+    <membership>
+      <userName>Andrés</userName>
+      <roleName>Alumno</roleName>
+      <groupName>SIE-Formacion</groupName>
+    </membership>
+    <membership>
+      <userName>María</userName>
+      <roleName>Alumno</roleName>
+      <groupName>SIE-Formacion</groupName>
+    </membership>
+  </memberships>
+</organization:Organization>

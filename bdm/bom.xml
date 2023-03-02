@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<businessObjectModel xmlns="http://documentation.bonitasoft.com/bdm-xml-schema/1.0" modelVersion="1.0" productVersion="7.14.0">
+    <businessObjects>
+        <businessObject qualifiedName="sie_formacion.Curso">
+            <fields>
+                <field type="LOCALDATE" length="255" name="fecha" nullable="true" collection="false"/>
+                <field type="STRING" length="255" name="nombre" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="instructor" nullable="false" collection="false"/>
+                <field type="INTEGER" length="255" name="total_horas" nullable="false" collection="false"/>
+                <field type="STRING" length="255" name="materias" nullable="true" collection="true"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries>
+                <query name="findByNombreInstructor" content="SELECT c &#13;&#10;FROM Curso c &#13;&#10;WHERE c.nombre = :nombre&#13;&#10;AND c.instructor = :instructor&#13;&#10;ORDER BY c.persistenceId ASC" returnType="sie_formacion.Curso">
+                    <description>Devuelve los cursos con un nombre de instructor concreto</description>
+                    <queryParameters>
+                        <queryParameter name="nombre" className="java.lang.String"/>
+                        <queryParameter name="instructor" className="java.lang.String"/>
+                    </queryParameters>
+                </query>
+            </queries>
+            <indexes/>
+        </businessObject>
+        <businessObject qualifiedName="sie_formacion.Matriculas">
+            <fields>
+                <field type="STRING" length="255" name="alumno" nullable="false" collection="false"/>
+                <relationField type="AGGREGATION" reference="sie_formacion.Curso" fetchType="LAZY" name="curso" nullable="true" collection="false"/>
+                <field type="LOCALDATE" length="255" name="fecha_matricula" nullable="false" collection="false"/>
+                <field type="FLOAT" length="255" name="nota" nullable="true" collection="false"/>
+            </fields>
+            <uniqueConstraints/>
+            <queries/>
+            <indexes/>
+        </businessObject>
+    </businessObjects>
+</businessObjectModel>
